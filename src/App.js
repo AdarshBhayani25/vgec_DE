@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 import CardList from "./cardList";
 import { sub } from "./sub";
-import Searchbox from "./searchbox";
+import Searchbox from "./Searchbox";
 import Scroll from "./Scroll";
+import NavBar from "./component/NavBar";
+import Home from "./home/Home";
+
+import {
+    Routes,
+    Route,
+} from "react-router-dom";
 
 
 class App extends Component {
@@ -25,11 +32,16 @@ class App extends Component {
         })
         return (
             <div className="tc">
-                <h1>Computer-science subject</h1>
-                <Searchbox SearchChange={this.onSearchChange} />
-                <Scroll>
-                    <CardList sub={filtersub} />
-                </Scroll>
+                <NavBar onsearch={this.onSearchChange} />
+                <Routes>
+                    
+                    <Route path="/faculty" element={<Scroll>
+                        <CardList sub={filtersub} />
+                    </Scroll>} />
+                    <Route path="/" element={<Home />} />
+
+                </Routes>
+
             </div>
         );
     }

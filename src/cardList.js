@@ -6,11 +6,15 @@ const CardList = ({ sub }) => {
 
         sub.map((user, i) => {
             return (
-                <Card key={i}
+                <Card 
+                
+                key={i}
                     id={sub[i].id}
                     code={sub[i].code}
                     name={sub[i].name}
-                    image={sub[i].img} />
+                    image={sub[i].img}
+                    block={sub[i].block}
+                    info={sub} />
 
             );
         })

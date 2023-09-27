@@ -1,0 +1,15 @@
+/* MyButton.css */
+
+/* Default button style */
+.my-button {
+    background-color: #00ff00; /* Default color */
+    color: white;
+  
+  }
+  
+  /* CSS class for the condition when the button color should change (greater than 5 AM) */
+  .my-button.red {
+    background-color: red;
+    
+  }
+  

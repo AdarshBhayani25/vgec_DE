@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import App from './App'
 import './index.css';
 import 'tachyons';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
 
-
-ReactDOM.render  (
+ReactDOM.render(
   <div>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+
   </div>,
   document.getElementById('root')
 

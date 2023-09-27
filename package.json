@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "react-router-dom": "^6.16.0",
     "tachyons-box-shadow": "^2.0.4"
   }
 }
